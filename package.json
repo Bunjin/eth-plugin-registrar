@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "ethjs-contract": "^0.2.3",
-    "promise-to-callback": "^1.0.0"
+    "ethjs-query": "^0.3.8",
+    "promise-to-callback": "^1.0.0",
+    "safe-event-emitter": "^1.0.1"
   }
 }
