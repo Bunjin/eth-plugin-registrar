@@ -9,13 +9,12 @@ contract PluginRegistrar {
   mapping (address => Plugin) public pluginsByDevAddress;
 
 
-  function pluginAddress(address devAddress) public constant returns(address){
-    //    return pluginsByDevAddress[devAddress].contractAddress;
+  function pluginAddress(address authorAddress) public constant returns(address){
+    return pluginsByDevAddress[authorAddress].contractAddress;
   }
   
   constructor() public {
-    //TEST
-    //    pluginsByDevAddress[0x6cCB1DEf4Ff8C4b953B084a220ec51817B65fD87] = Plugin(0x6cCB1DEf4Ff8C4b953B084a220ec51817B65fD87, "testURL");
+    pluginsByDevAddress[0x6cCB1DEf4Ff8C4b953B084a220ec51817B65fD87] = Plugin(0x6cCB1DEf4Ff8C4b953B084a220ec51817B65fD87, "http://localhost:8888");
   }
 
   function register(address contractAddress, string scriptUrl) public {

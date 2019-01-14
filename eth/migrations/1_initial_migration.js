@@ -1,5 +1,5 @@
-var PluginRegistrar = artifacts.require("./PluginRegistrar.sol");
+var Migrations = artifacts.require("./Migrations.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(PluginRegistrar);
+  deployer.deploy(Migrations)
 };
